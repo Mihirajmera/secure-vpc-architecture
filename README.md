@@ -129,6 +129,15 @@ terraform output alb_dns_name
 terraform destroy -auto-approve
 ```
 
+## 🤖 CI/CD Pipeline
+
+This repository includes a GitHub Actions workflow (`.github/workflows/terraform-ci.yml`) that automatically runs on pushes and pull requests to `master` or `main`.
+
+The pipeline performs:
+- **Terraform Linting**: Checks formatting consistency using `terraform fmt -check`.
+- **Terraform Validation**: Validates the Terraform configuration syntax and schema.
+- **Security Auditing**: Integrates Aqua Security's **Trivy** scan to detect high/critical severity security risks and misconfigurations.
+
 ## 💰 Cost Analysis
 
 | Resource | Monthly Cost | Purpose |
@@ -222,7 +231,7 @@ This project demonstrates mastery of:
 - SSL/TLS Termination - HTTPS with ACM certificates
 - Auto Scaling - EC2 Auto Scaling Groups
 - Database Integration - RDS PostgreSQL in private subnets
-- CI/CD Pipeline - GitHub Actions for automated deployment
+- CI/CD Deployment - Automated infrastructure deployment upon pull request merge
 - Monitoring - CloudWatch dashboards and alarms
 - Backup Strategy - Automated snapshots and backups
 
