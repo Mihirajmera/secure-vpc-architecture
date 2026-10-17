@@ -27,3 +27,11 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.temp
+
+# Terraform plans, state and real variable values never belong in git
+tfplan
+*.tfplan
+*.tfstate
+*.tfstate.*
+.terraform/
+terraform.tfvars

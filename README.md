@@ -1,5 +1,10 @@
 # 🏗️ Secure VPC Architecture with Terraform
 
+[![Terraform CI](https://github.com/Mihirajmera/secure-vpc-architecture/actions/workflows/terraform-ci.yml/badge.svg)](https://github.com/Mihirajmera/secure-vpc-architecture/actions/workflows/terraform-ci.yml)
+[![CodeQL](https://github.com/Mihirajmera/secure-vpc-architecture/actions/workflows/codeql.yml/badge.svg)](https://github.com/Mihirajmera/secure-vpc-architecture/actions/workflows/codeql.yml)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/Mihirajmera/secure-vpc-architecture/badge)](https://scorecard.dev/viewer/?uri=github.com/Mihirajmera/secure-vpc-architecture)
+[![Release](https://img.shields.io/github/v/release/Mihirajmera/secure-vpc-architecture?color=0891b2)](https://github.com/Mihirajmera/secure-vpc-architecture/releases)
+
 Enterprise-grade secure VPC architecture implementing Zero Trust networking principles with automated infrastructure deployment
 
 ## 🎯 Project Overview
@@ -88,19 +93,18 @@ graph TD
 
 **Clone and Navigate**
 ```bash
-git clone <your-repo>
-cd secure-vpc-terraform
+git clone https://github.com/Mihirajmera/secure-vpc-architecture.git
+cd secure-vpc-architecture
+cp terraform.tfvars.example terraform.tfvars   # then edit values; terraform.tfvars is git-ignored
 ```
 
 **Configure AWS Credentials**
 ```bash
-# Option 1: Environment Variables
-export AWS_ACCESS_KEY_ID="your-access-key"
-export AWS_SECRET_ACCESS_KEY="your-secret-key"
-export AWS_DEFAULT_REGION="us-east-1"
+# Preferred: short-lived credentials through AWS IAM Identity Center (SSO)
+aws configure sso --profile vpc-lab
+export AWS_PROFILE=vpc-lab
 
-# Option 2: AWS CLI
-aws configure
+# Never put access keys in .tf or .tfvars files. See credentials-setup.md.
 ```
 
 **Deploy Infrastructure**
@@ -108,7 +112,7 @@ aws configure
 # Initialize Terraform
 terraform init
 
-# Plan deployment
+# Plan deployment (tfplan is git-ignored: plan files can contain sensitive values)
 terraform plan -out tfplan
 
 # Apply changes
@@ -152,7 +156,7 @@ The pipeline performs:
 
 ## 🔧 Configuration
 
-### Variables (terraform.tfvars)
+### Variables (terraform.tfvars, copied from terraform.tfvars.example)
 ```hcl
 aws_region   = "us-east-1"
 project_name = "secure-vpc-architecture"
@@ -189,7 +193,7 @@ secure-vpc-terraform/
 ├── alb.tf                   # ALB, Target Group, Listener, Attachment
 ├── flow_logs.tf             # CloudWatch Logs, IAM role/policy, VPC Flow Logs
 ├── outputs.tf                # Terraform outputs (e.g. ALB DNS)
-├── terraform.tfvars          # Configuration values
+├── terraform.tfvars.example  # Example configuration values (copy to terraform.tfvars)
 └── README.md                 # This file
 ```
 
