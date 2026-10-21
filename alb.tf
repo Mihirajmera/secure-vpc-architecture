@@ -5,6 +5,8 @@ resource "aws_lb" "app_alb" {
   security_groups    = [aws_security_group.alb_sg.id]
   subnets            = [for s in aws_subnet.public : s.id]
 
+  drop_invalid_header_fields = true
+
   tags = merge(local.tags, {
     Name = "${local.project_name}-alb"
   })

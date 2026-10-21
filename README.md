@@ -11,6 +11,18 @@ Enterprise-grade secure VPC architecture implementing Zero Trust networking prin
 
 This project demonstrates advanced AWS networking and security best practices by building a production-ready VPC architecture that follows the Zero Trust security model. The infrastructure ensures that all traffic is encrypted, logged, and follows the principle of least privilege access.
 
+## Compliance evidence (policy as code)
+
+Every change is scanned with [Checkov](https://www.checkov.io/) in CI, and each result is mapped to **NIST SP 800-53 Rev. 5** and the **CIS AWS Foundations Benchmark v3.0.0** ([`compliance/iac_controls.yaml`](compliance/iac_controls.yaml)). A finding can't just be ignored: it has to be **fixed**, or recorded in [`compliance/exceptions.yaml`](compliance/exceptions.yaml) as *risk-accepted*, *not-applicable* or *deferred*, with a reason and an expiry date. CI fails on any finding without a valid exception, including expired ones.
+
+**→ [Read the evidence report](compliance/report.md)** · [OSCAL assessment results](compliance/assessment-results.json)
+
+```bash
+pip install --require-hashes -r compliance/requirements.txt
+checkov -d . --framework terraform -o json --compact --skip-download --skip-path compliance > compliance/checkov.json
+python compliance/iac_evidence.py compliance/checkov.json
+```
+
 ## 🏆 Key Achievements
 
 - ✅ Zero Trust Architecture - No direct internet access to private resources

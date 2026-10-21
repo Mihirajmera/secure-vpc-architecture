@@ -1,0 +1,75 @@
+# Reviewed exceptions to Checkov findings. Every failed check must be fixed or listed here
+# with a decision, a reason and an expiry; CI fails on anything else, including expired entries.
+#   risk-accepted   - the risk is real, compensating controls are in place, owner accepts it
+#   not-applicable  - the check doesn't apply to this design, or is a scanner false positive
+#   deferred        - should be fixed; tracked with a date
+system: secure-vpc-architecture
+owner: Mihir Ajmera
+reviewed: 2026-10-21
+
+exceptions:
+  - check: CKV_AWS_2
+    resources: [aws_lb_listener.http]
+    decision: deferred
+    reason: HTTPS needs a domain and an ACM certificate, which this reference deployment doesn't have. Add a 443 listener with TLS 1.2+ and redirect 80 to it before serving real traffic.
+    expires: 2027-01-31
+  - check: CKV_AWS_103
+    resources: [aws_lb_listener.http]
+    decision: deferred
+    reason: Same as CKV_AWS_2; the TLS policy applies once the HTTPS listener exists.
+    expires: 2027-01-31
+  - check: CKV2_AWS_20
+    resources: [aws_lb.app_alb]
+    decision: deferred
+    reason: Same as CKV_AWS_2; the HTTP-to-HTTPS redirect needs the HTTPS listener.
+    expires: 2027-01-31
+  - check: CKV_AWS_378
+    resources: [aws_lb_target_group.app_tg]
+    decision: risk-accepted
+    reason: HTTP between the load balancer and the app stays inside the VPC, restricted by security groups to the ALB only. TLS terminates at the load balancer.
+    expires: 2027-04-21
+  - check: CKV_AWS_260
+    resources: [aws_security_group.alb_sg]
+    decision: risk-accepted
+    reason: The internet-facing load balancer must accept port 80 to serve the site (and later to redirect to HTTPS). Only the load balancer is exposed; instances are in private subnets.
+    expires: 2027-04-21
+  - check: CKV2_AWS_28
+    resources: [aws_lb.app_alb]
+    decision: deferred
+    reason: Attach an AWS WAF web ACL with the managed core rule set before production traffic.
+    expires: 2027-01-31
+  - check: CKV_AWS_91
+    resources: [aws_lb.app_alb]
+    decision: deferred
+    reason: Load balancer access logs need a dedicated S3 bucket with a delivery policy; VPC flow logs cover network-level evidence meanwhile.
+    expires: 2027-01-31
+  - check: CKV_AWS_150
+    resources: [aws_lb.app_alb]
+    decision: not-applicable
+    reason: Reference environment that is created and destroyed with deploy.sh; deletion protection would block teardown.
+    expires: 2027-04-21
+  - check: CKV2_AWS_5
+    resources: [aws_security_group.db_sg]
+    decision: not-applicable
+    reason: The database security group is defined ahead of the data tier so its rules (app-only ingress, no egress) are reviewed before any database exists.
+    expires: 2027-04-21
+  - check: CKV_AWS_158
+    resources: [aws_cloudwatch_log_group.vpc_flow_logs]
+    decision: risk-accepted
+    reason: Flow logs are encrypted with the CloudWatch Logs service key. A customer-managed KMS key adds key-policy management with little benefit for network metadata.
+    expires: 2027-04-21
+  - check: CKV_AWS_126
+    resources: [aws_instance.app]
+    decision: not-applicable
+    reason: One t3.micro demo instance; basic 5-minute metrics are enough and detailed monitoring is billed.
+    expires: 2027-04-21
+  - check: CKV_AWS_135
+    resources: [aws_instance.app]
+    decision: not-applicable
+    reason: Performance setting, not a security control; t3 instances are EBS-optimized by default.
+    expires: 2027-04-21
+  - check: CKV_AWS_394
+    resources: [aws_availability_zones.available]
+    decision: deferred
+    reason: Filter availability zones by zone ID so the subnet layout can't shift if AWS adds zones.
+    expires: 2027-01-31

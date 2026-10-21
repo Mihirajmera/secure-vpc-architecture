@@ -1,0 +1,4320 @@
+{
+  "assessment-results": {
+    "uuid": "e776be14-8bfa-59bc-a594-1a1c42c2f4a5",
+    "metadata": {
+      "title": "IaC compliance evidence: secure-vpc-architecture",
+      "last-modified": "2026-10-21T00:00:00+00:00",
+      "version": "1.0",
+      "oscal-version": "1.1.2"
+    },
+    "import-ap": {
+      "href": "#"
+    },
+    "results": [
+      {
+        "uuid": "f3991ef0-a888-517d-8a76-3b5d0a244f1a",
+        "title": "Checkov 3.3.22",
+        "start": "2026-10-21T00:00:00+00:00",
+        "description": "Scan output sha256 922a28dd4db666375d561452667250a08485fe9aa5fbe725a48a79092911134b",
+        "observations": [
+          {
+            "uuid": "ae7e92d8-7a90-5bcb-abff-76e5457bfa77",
+            "title": "CKV_AWS_328 aws_lb.app_alb",
+            "description": "Ensure that ALB is configured with defensive or strictest desync mitigation mode",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "538c1679-0e6b-5787-b19f-0174a93a371e",
+            "title": "CKV_AWS_131 aws_lb.app_alb",
+            "description": "Ensure that ALB drops HTTP headers",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "050a4310-0465-5712-96b2-fdc1f611296c",
+            "title": "CKV_AWS_261 aws_lb_target_group.app_tg",
+            "description": "Ensure HTTP HTTPS Target group defines Healthcheck",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "3b96c88c-74b5-5c29-b355-d09da1e6724e",
+            "title": "CKV_AWS_386 aws_ami.amazon_linux",
+            "description": "Reduce potential for WhoAMI cloud image name confusion attack",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "8967a09b-f3c3-5414-9005-d46b3504a5d9",
+            "title": "CKV_AWS_1 aws_iam_policy_document.ec2_assume_role",
+            "description": "Ensure IAM policies that allow full \"*-*\" administrative privileges are not created",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "3f333fda-0f01-5f7d-8811-09f2646a7c4a",
+            "title": "CKV_AWS_358 aws_iam_policy_document.ec2_assume_role",
+            "description": "Ensure AWS GitHub Actions OIDC authorization policies only allow safe claims and claim order",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "e622cc3b-2c76-5530-a779-bd0932605ace",
+            "title": "CKV_AWS_107 aws_iam_policy_document.ec2_assume_role",
+            "description": "Ensure IAM policies does not allow credentials exposure",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "e07a8cfc-31b1-58ad-bfea-4c40810dbdb8",
+            "title": "CKV_AWS_108 aws_iam_policy_document.ec2_assume_role",
+            "description": "Ensure IAM policies does not allow data exfiltration",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "56c1af7c-0053-5672-b65e-bbb8a0abe52e",
+            "title": "CKV_AWS_109 aws_iam_policy_document.ec2_assume_role",
+            "description": "Ensure IAM policies does not allow permissions management / resource exposure without constraints",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "e7456d0d-4093-50e1-ac6c-07e36851d09d",
+            "title": "CKV_AWS_110 aws_iam_policy_document.ec2_assume_role",
+            "description": "Ensure IAM policies does not allow privilege escalation",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "d730400e-04b3-5c0b-93cb-7255854ba20c",
+            "title": "CKV_AWS_283 aws_iam_policy_document.ec2_assume_role",
+            "description": "Ensure no IAM policies documents allow ALL or any AWS principal permissions to the resource",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "102596f5-06d0-5d15-bdd2-5e51313648bc",
+            "title": "CKV_AWS_111 aws_iam_policy_document.ec2_assume_role",
+            "description": "Ensure IAM policies does not allow write access without constraints",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "d1123444-06e1-5823-bdbf-132e029fb59b",
+            "title": "CKV_AWS_356 aws_iam_policy_document.ec2_assume_role",
+            "description": "Ensure no IAM policies documents allow \"*\" as a statement's resource for restrictable actions",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "23047a1e-d3a6-5b28-8710-407f5f7b239b",
+            "title": "CKV_AWS_49 aws_iam_policy_document.ec2_assume_role",
+            "description": "Ensure no IAM policies documents allow \"*\" as a statement's actions",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "1a542bd0-ea81-5f73-ac5b-4611ca679265",
+            "title": "CKV_AWS_393 aws_iam_role.ec2_role",
+            "description": "Ensure AWS GitHub Actions OIDC authorization policies only allow safe claims and claim order on IAM role",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "74b0c7e8-ece0-5648-b260-0693695ab81e",
+            "title": "CKV_AWS_274 aws_iam_role.ec2_role",
+            "description": "Disallow IAM roles, users, and groups from using the AWS AdministratorAccess policy",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "351ae5ca-f8e0-51d6-807f-f90909f5df82",
+            "title": "CKV_AWS_61 aws_iam_role.ec2_role",
+            "description": "Ensure AWS IAM policy does not allow assume role permission across all services",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "5ca5cbd2-1d9d-5bc9-9f11-103b5199dd01",
+            "title": "CKV_AWS_60 aws_iam_role.ec2_role",
+            "description": "Ensure IAM role allows only specific services or principals to assume it",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "5502b86a-b169-5d3d-84e5-270b73effe26",
+            "title": "CKV_AWS_274 aws_iam_role_policy_attachment.ssm_core",
+            "description": "Disallow IAM roles, users, and groups from using the AWS AdministratorAccess policy",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "489b59f4-c3a1-50bc-beaa-3b1e80b7d898",
+            "title": "CKV_AWS_46 aws_instance.app",
+            "description": "Ensure no hard-coded secrets exist in EC2 user data",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "b99115b9-b90e-5e45-94ff-475edd1d0e59",
+            "title": "CKV_AWS_88 aws_instance.app",
+            "description": "EC2 instance should not have public IP.",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "f6a34cf8-7f30-5d44-91bb-d92096ab4802",
+            "title": "CKV_AWS_79 aws_instance.app",
+            "description": "Ensure Instance Metadata Service Version 1 is not enabled",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "d818bb16-73b3-5335-9626-25a804fd87c4",
+            "title": "CKV_AWS_8 aws_instance.app",
+            "description": "Ensure all data stored in the Launch configuration or instance Elastic Blocks Store is securely encrypted",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "d453781d-7181-5e51-928e-2d6843a0b225",
+            "title": "CKV_AWS_1 aws_iam_policy_document.vpc_flow_assume",
+            "description": "Ensure IAM policies that allow full \"*-*\" administrative privileges are not created",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "ecbdd191-84ac-530b-aefe-6f14b988c5e4",
+            "title": "CKV_AWS_358 aws_iam_policy_document.vpc_flow_assume",
+            "description": "Ensure AWS GitHub Actions OIDC authorization policies only allow safe claims and claim order",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "011b1a9b-af30-56b0-8fe6-c95b5783945b",
+            "title": "CKV_AWS_107 aws_iam_policy_document.vpc_flow_assume",
+            "description": "Ensure IAM policies does not allow credentials exposure",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "a34e5517-ffdc-5224-aa0d-17f0e680b9ce",
+            "title": "CKV_AWS_108 aws_iam_policy_document.vpc_flow_assume",
+            "description": "Ensure IAM policies does not allow data exfiltration",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "e2ed8770-f3a4-5b6f-95ea-28d1fd88096c",
+            "title": "CKV_AWS_109 aws_iam_policy_document.vpc_flow_assume",
+            "description": "Ensure IAM policies does not allow permissions management / resource exposure without constraints",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "73a6f304-86e2-5ed5-877c-dde7125552a3",
+            "title": "CKV_AWS_110 aws_iam_policy_document.vpc_flow_assume",
+            "description": "Ensure IAM policies does not allow privilege escalation",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "3a97d8da-cd98-5142-abe5-261343b0e1df",
+            "title": "CKV_AWS_283 aws_iam_policy_document.vpc_flow_assume",
+            "description": "Ensure no IAM policies documents allow ALL or any AWS principal permissions to the resource",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "795c22ea-2a95-570e-b332-1928831304ab",
+            "title": "CKV_AWS_111 aws_iam_policy_document.vpc_flow_assume",
+            "description": "Ensure IAM policies does not allow write access without constraints",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "367e4999-c486-5271-96b2-2f39a901925e",
+            "title": "CKV_AWS_356 aws_iam_policy_document.vpc_flow_assume",
+            "description": "Ensure no IAM policies documents allow \"*\" as a statement's resource for restrictable actions",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "c8150be6-ef4f-5b3b-959c-2ff342d141b8",
+            "title": "CKV_AWS_49 aws_iam_policy_document.vpc_flow_assume",
+            "description": "Ensure no IAM policies documents allow \"*\" as a statement's actions",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "9e51801b-0652-591b-b10e-abd2ec282d16",
+            "title": "CKV_AWS_1 aws_iam_policy_document.vpc_flow_policy",
+            "description": "Ensure IAM policies that allow full \"*-*\" administrative privileges are not created",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "2108badb-70c4-5866-bf71-4951b000c780",
+            "title": "CKV_AWS_358 aws_iam_policy_document.vpc_flow_policy",
+            "description": "Ensure AWS GitHub Actions OIDC authorization policies only allow safe claims and claim order",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "47819d30-c5ab-5c7a-afa8-52245e1690a8",
+            "title": "CKV_AWS_107 aws_iam_policy_document.vpc_flow_policy",
+            "description": "Ensure IAM policies does not allow credentials exposure",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "f49947ec-36b6-5093-9261-796d323a47be",
+            "title": "CKV_AWS_108 aws_iam_policy_document.vpc_flow_policy",
+            "description": "Ensure IAM policies does not allow data exfiltration",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "032fcf67-41e6-511b-93e2-6595e0fe3cbf",
+            "title": "CKV_AWS_109 aws_iam_policy_document.vpc_flow_policy",
+            "description": "Ensure IAM policies does not allow permissions management / resource exposure without constraints",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "ea68c45a-97f4-51e0-8c98-d0c9991369ae",
+            "title": "CKV_AWS_110 aws_iam_policy_document.vpc_flow_policy",
+            "description": "Ensure IAM policies does not allow privilege escalation",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "3c0b8f1a-0cfe-5525-9179-9b4c59ab5f85",
+            "title": "CKV_AWS_283 aws_iam_policy_document.vpc_flow_policy",
+            "description": "Ensure no IAM policies documents allow ALL or any AWS principal permissions to the resource",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "f8ee176b-6efd-54d7-88e9-987e236906f8",
+            "title": "CKV_AWS_111 aws_iam_policy_document.vpc_flow_policy",
+            "description": "Ensure IAM policies does not allow write access without constraints",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "e40513d9-71e1-5476-bf44-85d09e44804e",
+            "title": "CKV_AWS_356 aws_iam_policy_document.vpc_flow_policy",
+            "description": "Ensure no IAM policies documents allow \"*\" as a statement's resource for restrictable actions",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "3c069390-8494-510c-ad22-9f80f0de5e85",
+            "title": "CKV_AWS_49 aws_iam_policy_document.vpc_flow_policy",
+            "description": "Ensure no IAM policies documents allow \"*\" as a statement's actions",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "2c2c24ce-b56c-50e0-8567-cef0a1de40c5",
+            "title": "CKV_AWS_66 aws_cloudwatch_log_group.vpc_flow_logs",
+            "description": "Ensure that CloudWatch Log Group specifies retention days",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "60c31e28-6018-5db8-970b-bd6f5b3368b5",
+            "title": "CKV_AWS_338 aws_cloudwatch_log_group.vpc_flow_logs",
+            "description": "Ensure CloudWatch log groups retains logs for at least 1 year",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "21ecd3cb-875b-5350-a85c-3bf76c296500",
+            "title": "CKV_AWS_393 aws_iam_role.vpc_flow_role",
+            "description": "Ensure AWS GitHub Actions OIDC authorization policies only allow safe claims and claim order on IAM role",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "161c9cf1-5c8b-52b7-a898-ebdc580f4f84",
+            "title": "CKV_AWS_274 aws_iam_role.vpc_flow_role",
+            "description": "Disallow IAM roles, users, and groups from using the AWS AdministratorAccess policy",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "c4ac920b-352d-504a-95ae-4b7026bd62e5",
+            "title": "CKV_AWS_61 aws_iam_role.vpc_flow_role",
+            "description": "Ensure AWS IAM policy does not allow assume role permission across all services",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "800965af-3d77-5a3c-bd92-4d78b383341a",
+            "title": "CKV_AWS_60 aws_iam_role.vpc_flow_role",
+            "description": "Ensure IAM role allows only specific services or principals to assume it",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "bf7ba047-9276-5d81-a229-52a94231d224",
+            "title": "CKV_AWS_62 aws_iam_role_policy.vpc_flow_logs",
+            "description": "Ensure IAM policies that allow full \"*-*\" administrative privileges are not created",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "633c9371-128f-5998-9d43-6ae26f0a2ed3",
+            "title": "CKV_AWS_63 aws_iam_role_policy.vpc_flow_logs",
+            "description": "Ensure no IAM policies documents allow \"*\" as a statement's actions",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "ee421c45-d606-5db9-af03-b27775904bd2",
+            "title": "CKV_AWS_130 aws_subnet.public",
+            "description": "Ensure VPC subnets do not assign public IP by default",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "fd6194bb-a443-5728-9e23-21e7cf42082b",
+            "title": "CKV_AWS_130 aws_subnet.private",
+            "description": "Ensure VPC subnets do not assign public IP by default",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "053ff338-353c-501d-9a30-06d64aeffa5a",
+            "title": "CKV_AWS_41 aws.default",
+            "description": "Ensure no hard coded AWS access key and secret key exists in provider",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "21d9495f-a85d-57e8-b819-ff561d019916",
+            "title": "CKV_AWS_23 aws_security_group.alb_sg",
+            "description": "Ensure every security group and rule has a description",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "c97c0375-6cbf-5ba6-b3e1-7324688bb11a",
+            "title": "CKV_AWS_382 aws_security_group.alb_sg",
+            "description": "Ensure no security groups allow egress from 0.0.0.0:0 to port -1",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "feaaf7ca-c50d-59e9-a273-66aa6c3f07bd",
+            "title": "CKV_AWS_24 aws_security_group.alb_sg",
+            "description": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 22",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "7b3d3365-6a41-5612-a6d2-421f0662a852",
+            "title": "CKV_AWS_25 aws_security_group.alb_sg",
+            "description": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 3389",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "9be34acf-c628-5ed1-a95e-0fad94f367b8",
+            "title": "CKV_AWS_277 aws_security_group.alb_sg",
+            "description": "Ensure no security groups allow ingress from 0.0.0.0:0 to port -1",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "1f5964e0-ef5d-58f8-a3c1-28a75ca54152",
+            "title": "CKV_AWS_23 aws_security_group.app_sg",
+            "description": "Ensure every security group and rule has a description",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "93c56b0f-a607-5d24-85c2-b6e72719e5cc",
+            "title": "CKV_AWS_382 aws_security_group.app_sg",
+            "description": "Ensure no security groups allow egress from 0.0.0.0:0 to port -1",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "fba6f932-7291-5ee6-b9ed-7726da36c956",
+            "title": "CKV_AWS_24 aws_security_group.app_sg",
+            "description": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 22",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "a7208a97-d96f-5e6c-8515-ae803d01e40e",
+            "title": "CKV_AWS_25 aws_security_group.app_sg",
+            "description": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 3389",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "56f29518-e208-5909-adb8-b7c880d34f5b",
+            "title": "CKV_AWS_260 aws_security_group.app_sg",
+            "description": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 80",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "aeef56c7-7442-5167-906b-8236ee5d6f4a",
+            "title": "CKV_AWS_277 aws_security_group.app_sg",
+            "description": "Ensure no security groups allow ingress from 0.0.0.0:0 to port -1",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "d68dc67f-95f5-5ec4-9923-cf61b18d9864",
+            "title": "CKV_AWS_23 aws_security_group.db_sg",
+            "description": "Ensure every security group and rule has a description",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "d2578b60-7eb4-5b8c-83ff-201c9773985b",
+            "title": "CKV_AWS_382 aws_security_group.db_sg",
+            "description": "Ensure no security groups allow egress from 0.0.0.0:0 to port -1",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "5a012bf3-9940-53b4-98cb-f5f9e18e8182",
+            "title": "CKV_AWS_24 aws_security_group.db_sg",
+            "description": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 22",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "73ebe13a-9fe7-5b7c-b67f-9b4080bcc8fc",
+            "title": "CKV_AWS_25 aws_security_group.db_sg",
+            "description": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 3389",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "78af2a3d-6e1c-559b-825c-9e46de47e3be",
+            "title": "CKV_AWS_260 aws_security_group.db_sg",
+            "description": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 80",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "eb7fdad8-c66e-592f-bd61-796535ab9f5b",
+            "title": "CKV_AWS_277 aws_security_group.db_sg",
+            "description": "Ensure no security groups allow ingress from 0.0.0.0:0 to port -1",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "4209fe16-e914-5574-9ba4-0ac78ffe2eaa",
+            "title": "CKV2_AWS_35 aws_route_table.private",
+            "description": "AWS NAT Gateways should be utilized for the default route",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "33497aa8-e77e-5d91-b3fe-08a8471c8401",
+            "title": "CKV2_AWS_35 aws_route.private_nat_gateway",
+            "description": "AWS NAT Gateways should be utilized for the default route",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "350e7d5f-d99e-5377-ac61-b88be1e0e511",
+            "title": "CKV2_AWS_35 aws_route_table.public",
+            "description": "AWS NAT Gateways should be utilized for the default route",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "4066bb05-9ca4-58e2-b412-81ecca7c0521",
+            "title": "CKV2_AWS_35 aws_route.public_internet_access",
+            "description": "AWS NAT Gateways should be utilized for the default route",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "b05ab6a8-1f0d-5ff0-85b9-188a89b69477",
+            "title": "CKV2_AWS_56 aws_iam_role.ec2_role",
+            "description": "Ensure AWS Managed IAMFullAccess IAM policy is not used.",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "ed2cfec9-a74a-579b-a017-7a649653f8de",
+            "title": "CKV2_AWS_56 aws_iam_role_policy_attachment.ssm_core",
+            "description": "Ensure AWS Managed IAMFullAccess IAM policy is not used.",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "a1a23dd8-68d8-50a4-a9cd-301396729cbe",
+            "title": "CKV2_AWS_56 aws_iam_role.vpc_flow_role",
+            "description": "Ensure AWS Managed IAMFullAccess IAM policy is not used.",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "0f186415-6a01-586e-aca6-6d67575576c3",
+            "title": "CKV2_AWS_74 aws_lb_listener.http",
+            "description": "Ensure AWS Load Balancers use strong ciphers",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "ae921731-d5dd-5808-865d-9b16b84c6e5d",
+            "title": "CKV2_AWS_76 aws_lb.app_alb",
+            "description": "Ensure AWS ALB attached WAFv2 WebACL is configured with AMR for Log4j Vulnerability",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "f7d51ae1-868b-5eda-8551-73949b16ba64",
+            "title": "CKV2_AWS_41 aws_instance.app",
+            "description": "Ensure an IAM role is attached to EC2 instance",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "7cbc143f-e351-59e7-ab74-64d99381bc56",
+            "title": "CKV2_AWS_19 aws_eip.nat",
+            "description": "Ensure that all EIP addresses allocated to a VPC are attached to EC2 instances",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "03430f38-26fb-5427-b93e-84ca06b8f8ab",
+            "title": "CKV2_AWS_5 aws_security_group.alb_sg",
+            "description": "Ensure that Security Groups are attached to another resource",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "01ba93e8-fc8d-5f67-9275-c7a48ed279bc",
+            "title": "CKV2_AWS_5 aws_security_group.app_sg",
+            "description": "Ensure that Security Groups are attached to another resource",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "4c53e5bb-9ff3-5d21-8be5-c8d01f07208c",
+            "title": "CKV2_AWS_11 aws_vpc.main",
+            "description": "Ensure VPC flow logging is enabled in all VPCs",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "f070fae9-e10f-5f43-941d-a0b8e31ef86b",
+            "title": "CKV2_AWS_44 aws_route_table.private",
+            "description": "Ensure AWS route table with VPC peering does not contain routes overly permissive to all traffic",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "8e5f7f96-72e8-5c4b-8b96-e6b22d8f7df4",
+            "title": "CKV2_AWS_44 aws_route.private_nat_gateway",
+            "description": "Ensure AWS route table with VPC peering does not contain routes overly permissive to all traffic",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "805ff5bb-0f73-570d-9bd5-81d852a9ae6b",
+            "title": "CKV2_AWS_44 aws_route_table.public",
+            "description": "Ensure AWS route table with VPC peering does not contain routes overly permissive to all traffic",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "bc8c30d0-f6db-51d6-be09-edde55c828c4",
+            "title": "CKV2_AWS_44 aws_route.public_internet_access",
+            "description": "Ensure AWS route table with VPC peering does not contain routes overly permissive to all traffic",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "bad5a2b5-3f73-5ac6-8c6e-875e24fd0f4f",
+            "title": "CKV2_AWS_12 aws_vpc.main",
+            "description": "Ensure the default security group of every VPC restricts all traffic",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "9bb75277-d678-53c9-8d48-504d8c5f30f4",
+            "title": "CKV2_AWS_40 aws_iam_policy_document.ec2_assume_role",
+            "description": "Ensure AWS IAM policy does not allow full IAM privileges",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "29a69e40-793c-5475-af24-b2f032db62e9",
+            "title": "CKV2_AWS_40 aws_iam_policy_document.vpc_flow_assume",
+            "description": "Ensure AWS IAM policy does not allow full IAM privileges",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "5953434b-6148-57b7-9126-894f13d5a76e",
+            "title": "CKV2_AWS_40 aws_iam_policy_document.vpc_flow_policy",
+            "description": "Ensure AWS IAM policy does not allow full IAM privileges",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "bcb432d6-07c5-5618-9375-cc3804e4bcf5",
+            "title": "CKV_AWS_91 aws_lb.app_alb",
+            "description": "Ensure the ELBv2 (Application/Network) has access logging enabled",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "not-satisfied"
+              },
+              {
+                "name": "remark",
+                "value": "exception: deferred, expires 2027-01-31"
+              }
+            ]
+          },
+          {
+            "uuid": "3060da4a-367d-56b5-ad45-e27328f213c7",
+            "title": "CKV_AWS_150 aws_lb.app_alb",
+            "description": "Ensure that Load Balancer has deletion protection enabled",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "not-satisfied"
+              },
+              {
+                "name": "remark",
+                "value": "exception: not-applicable, expires 2027-04-21"
+              }
+            ]
+          },
+          {
+            "uuid": "71ae60ba-5fb2-5996-acaf-cd1e0f0a3639",
+            "title": "CKV_AWS_2 aws_lb_listener.http",
+            "description": "Ensure ALB protocol is HTTPS",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "not-satisfied"
+              },
+              {
+                "name": "remark",
+                "value": "exception: deferred, expires 2027-01-31"
+              }
+            ]
+          },
+          {
+            "uuid": "397fee83-0e85-58cc-b623-2d6c1ef050c5",
+            "title": "CKV_AWS_126 aws_instance.app",
+            "description": "Ensure that detailed monitoring is enabled for EC2 instances",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "not-satisfied"
+              },
+              {
+                "name": "remark",
+                "value": "exception: not-applicable, expires 2027-04-21"
+              }
+            ]
+          },
+          {
+            "uuid": "2951be09-86fc-5dc1-8674-35c009a24de3",
+            "title": "CKV_AWS_135 aws_instance.app",
+            "description": "Ensure that EC2 is EBS optimized",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "not-satisfied"
+              },
+              {
+                "name": "remark",
+                "value": "exception: not-applicable, expires 2027-04-21"
+              }
+            ]
+          },
+          {
+            "uuid": "fd5f1a6b-709b-5707-845d-dc3413bee288",
+            "title": "CKV_AWS_158 aws_cloudwatch_log_group.vpc_flow_logs",
+            "description": "Ensure that CloudWatch Log Group is encrypted by KMS",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "not-satisfied"
+              },
+              {
+                "name": "remark",
+                "value": "exception: risk-accepted, expires 2027-04-21"
+              }
+            ]
+          },
+          {
+            "uuid": "b9ef9360-c658-523c-8cff-2e5988a255ae",
+            "title": "CKV_AWS_394 aws_availability_zones.available",
+            "description": "Ensure aws_availability_zones data source pins zone identity so its result set does not silently expand when AWS adds an Availability Zone",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "not-satisfied"
+              },
+              {
+                "name": "remark",
+                "value": "exception: deferred, expires 2027-01-31"
+              }
+            ]
+          },
+          {
+            "uuid": "ddb8e8dc-2dc0-529e-8cbb-634fac518804",
+            "title": "CKV_AWS_260 aws_security_group.alb_sg",
+            "description": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 80",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "not-satisfied"
+              },
+              {
+                "name": "remark",
+                "value": "exception: risk-accepted, expires 2027-04-21"
+              }
+            ]
+          },
+          {
+            "uuid": "dcac00c8-a6f3-5567-9c7f-9f2e4408bac7",
+            "title": "CKV2_AWS_20 aws_lb.app_alb",
+            "description": "Ensure that ALB redirects HTTP requests into HTTPS ones",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "not-satisfied"
+              },
+              {
+                "name": "remark",
+                "value": "exception: deferred, expires 2027-01-31"
+              }
+            ]
+          },
+          {
+            "uuid": "e4cbe5c0-e305-5c57-a385-ac9c6004615f",
+            "title": "CKV_AWS_103 aws_lb_listener.http",
+            "description": "Ensure that load balancer is using at least TLS 1.2",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "not-satisfied"
+              },
+              {
+                "name": "remark",
+                "value": "exception: deferred, expires 2027-01-31"
+              }
+            ]
+          },
+          {
+            "uuid": "fdc8c113-cc76-5bfa-9811-f84edd6fd2ed",
+            "title": "CKV2_AWS_28 aws_lb.app_alb",
+            "description": "Ensure public facing ALB are protected by WAF",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "not-satisfied"
+              },
+              {
+                "name": "remark",
+                "value": "exception: deferred, expires 2027-01-31"
+              }
+            ]
+          },
+          {
+            "uuid": "ffbccfdb-c371-5d21-879e-72af8e92526b",
+            "title": "CKV_AWS_378 aws_lb_target_group.app_tg",
+            "description": "Ensure AWS Load Balancer doesn't use HTTP protocol",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "not-satisfied"
+              },
+              {
+                "name": "remark",
+                "value": "exception: risk-accepted, expires 2027-04-21"
+              }
+            ]
+          },
+          {
+            "uuid": "21ce4245-f9ef-5518-aa39-0af10f09d66f",
+            "title": "CKV2_AWS_5 aws_security_group.db_sg",
+            "description": "Ensure that Security Groups are attached to another resource",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "not-satisfied"
+              },
+              {
+                "name": "remark",
+                "value": "exception: not-applicable, expires 2027-04-21"
+              }
+            ]
+          }
+        ],
+        "findings": [
+          {
+            "uuid": "6c110a1f-54ce-505e-a680-3e7a925b6968",
+            "title": "CKV_AWS_328 -> SI-10",
+            "description": "Ensure that ALB is configured with defensive or strictest desync mitigation mode",
+            "target": {
+              "type": "objective-id",
+              "target-id": "si-10_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "ae7e92d8-7a90-5bcb-abff-76e5457bfa77"
+              }
+            ]
+          },
+          {
+            "uuid": "f69fd1ca-3666-52d4-895e-ec5f14cb9e17",
+            "title": "CKV_AWS_131 -> SI-10",
+            "description": "Ensure that ALB drops HTTP headers",
+            "target": {
+              "type": "objective-id",
+              "target-id": "si-10_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "538c1679-0e6b-5787-b19f-0174a93a371e"
+              }
+            ]
+          },
+          {
+            "uuid": "56bd4281-9984-533a-a635-3f444cfbcefd",
+            "title": "CKV_AWS_261 -> SC-5",
+            "description": "Ensure HTTP HTTPS Target group defines Healthcheck",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-5_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "050a4310-0465-5712-96b2-fdc1f611296c"
+              }
+            ]
+          },
+          {
+            "uuid": "ce6e8874-99f9-5c41-8516-e5fa9a2e350b",
+            "title": "CKV_AWS_386 -> CM-2",
+            "description": "Reduce potential for WhoAMI cloud image name confusion attack",
+            "target": {
+              "type": "objective-id",
+              "target-id": "cm-2_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "3b96c88c-74b5-5c29-b355-d09da1e6724e"
+              }
+            ]
+          },
+          {
+            "uuid": "aa4fba72-e5f2-52aa-b9dd-e492e7456b68",
+            "title": "CKV_AWS_386 -> SI-7",
+            "description": "Reduce potential for WhoAMI cloud image name confusion attack",
+            "target": {
+              "type": "objective-id",
+              "target-id": "si-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "3b96c88c-74b5-5c29-b355-d09da1e6724e"
+              }
+            ]
+          },
+          {
+            "uuid": "fa6c3c5b-26f4-588a-87a2-a3f30dcd56ab",
+            "title": "CKV_AWS_1 -> AC-6",
+            "description": "Ensure IAM policies that allow full \"*-*\" administrative privileges are not created",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "8967a09b-f3c3-5414-9005-d46b3504a5d9"
+              }
+            ]
+          },
+          {
+            "uuid": "ab51cbdb-f332-5b4d-9441-c805401c6ea7",
+            "title": "CKV_AWS_358 -> AC-3",
+            "description": "Ensure AWS GitHub Actions OIDC authorization policies only allow safe claims and claim order",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-3_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "3f333fda-0f01-5f7d-8811-09f2646a7c4a"
+              }
+            ]
+          },
+          {
+            "uuid": "b844d72c-52fa-5106-8752-4384efaa7d13",
+            "title": "CKV_AWS_358 -> IA-8",
+            "description": "Ensure AWS GitHub Actions OIDC authorization policies only allow safe claims and claim order",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ia-8_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "3f333fda-0f01-5f7d-8811-09f2646a7c4a"
+              }
+            ]
+          },
+          {
+            "uuid": "56ab5b5e-a68c-5e79-9ad3-c83413edb6ef",
+            "title": "CKV_AWS_107 -> AC-6",
+            "description": "Ensure IAM policies does not allow credentials exposure",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "e622cc3b-2c76-5530-a779-bd0932605ace"
+              }
+            ]
+          },
+          {
+            "uuid": "f2a28cc0-e963-5b82-9039-9266a41c9fa1",
+            "title": "CKV_AWS_107 -> IA-5",
+            "description": "Ensure IAM policies does not allow credentials exposure",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ia-5_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "e622cc3b-2c76-5530-a779-bd0932605ace"
+              }
+            ]
+          },
+          {
+            "uuid": "b654d4f2-2b12-5e79-81c9-4dd4949b0cf3",
+            "title": "CKV_AWS_108 -> AC-6",
+            "description": "Ensure IAM policies does not allow data exfiltration",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "e07a8cfc-31b1-58ad-bfea-4c40810dbdb8"
+              }
+            ]
+          },
+          {
+            "uuid": "47a86b5e-deaf-5b80-821f-6f2803ce5312",
+            "title": "CKV_AWS_108 -> SC-7",
+            "description": "Ensure IAM policies does not allow data exfiltration",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "e07a8cfc-31b1-58ad-bfea-4c40810dbdb8"
+              }
+            ]
+          },
+          {
+            "uuid": "9f5908db-6f56-5c10-85c9-189c5b3bd5bd",
+            "title": "CKV_AWS_109 -> AC-6",
+            "description": "Ensure IAM policies does not allow permissions management / resource exposure without constraints",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "56c1af7c-0053-5672-b65e-bbb8a0abe52e"
+              }
+            ]
+          },
+          {
+            "uuid": "44ec1703-c466-5013-beae-cf9bc1a5e962",
+            "title": "CKV_AWS_109 -> AC-2",
+            "description": "Ensure IAM policies does not allow permissions management / resource exposure without constraints",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-2_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "56c1af7c-0053-5672-b65e-bbb8a0abe52e"
+              }
+            ]
+          },
+          {
+            "uuid": "eb79c7c6-a8a0-5186-a112-44ee2ac58542",
+            "title": "CKV_AWS_110 -> AC-6",
+            "description": "Ensure IAM policies does not allow privilege escalation",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "e7456d0d-4093-50e1-ac6c-07e36851d09d"
+              }
+            ]
+          },
+          {
+            "uuid": "0a74d2bc-4006-5366-8a4f-8ecb0791e02e",
+            "title": "CKV_AWS_283 -> AC-3",
+            "description": "Ensure no IAM policies documents allow ALL or any AWS principal permissions to the resource",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-3_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "d730400e-04b3-5c0b-93cb-7255854ba20c"
+              }
+            ]
+          },
+          {
+            "uuid": "bd41df97-d8bb-55e3-93ac-7a3cb0656b0c",
+            "title": "CKV_AWS_283 -> AC-6",
+            "description": "Ensure no IAM policies documents allow ALL or any AWS principal permissions to the resource",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "d730400e-04b3-5c0b-93cb-7255854ba20c"
+              }
+            ]
+          },
+          {
+            "uuid": "bf95f945-95fc-5d3d-8351-1e1dbc8d6c9f",
+            "title": "CKV_AWS_111 -> AC-6",
+            "description": "Ensure IAM policies does not allow write access without constraints",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "102596f5-06d0-5d15-bdd2-5e51313648bc"
+              }
+            ]
+          },
+          {
+            "uuid": "b7d433b1-fde7-587a-b890-38c19d4980a0",
+            "title": "CKV_AWS_356 -> AC-6",
+            "description": "Ensure no IAM policies documents allow \"*\" as a statement's resource for restrictable actions",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "d1123444-06e1-5823-bdbf-132e029fb59b"
+              }
+            ]
+          },
+          {
+            "uuid": "e6e73dac-28bd-58de-97c9-1683c3a66422",
+            "title": "CKV_AWS_49 -> AC-6",
+            "description": "Ensure no IAM policies documents allow \"*\" as a statement's actions",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "23047a1e-d3a6-5b28-8710-407f5f7b239b"
+              }
+            ]
+          },
+          {
+            "uuid": "1c5dbacc-14fc-528d-bfe0-8d5f9f1807a9",
+            "title": "CKV_AWS_393 -> AC-3",
+            "description": "Ensure AWS GitHub Actions OIDC authorization policies only allow safe claims and claim order on IAM role",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-3_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "1a542bd0-ea81-5f73-ac5b-4611ca679265"
+              }
+            ]
+          },
+          {
+            "uuid": "d1581419-f9c8-59f0-884b-851e420fc164",
+            "title": "CKV_AWS_393 -> IA-8",
+            "description": "Ensure AWS GitHub Actions OIDC authorization policies only allow safe claims and claim order on IAM role",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ia-8_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "1a542bd0-ea81-5f73-ac5b-4611ca679265"
+              }
+            ]
+          },
+          {
+            "uuid": "4bef9ee1-98e0-5e90-a7d3-f32046a8d28d",
+            "title": "CKV_AWS_274 -> AC-6",
+            "description": "Disallow IAM roles, users, and groups from using the AWS AdministratorAccess policy",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "74b0c7e8-ece0-5648-b260-0693695ab81e"
+              }
+            ]
+          },
+          {
+            "uuid": "f61040a7-5da8-5673-b8af-c7191d11a611",
+            "title": "CKV_AWS_61 -> AC-6",
+            "description": "Ensure AWS IAM policy does not allow assume role permission across all services",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "351ae5ca-f8e0-51d6-807f-f90909f5df82"
+              }
+            ]
+          },
+          {
+            "uuid": "b089a871-8949-5e86-b47d-6488bd493837",
+            "title": "CKV_AWS_61 -> AC-3",
+            "description": "Ensure AWS IAM policy does not allow assume role permission across all services",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-3_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "351ae5ca-f8e0-51d6-807f-f90909f5df82"
+              }
+            ]
+          },
+          {
+            "uuid": "73f00c09-4afb-5bc2-b24b-29632ebc201b",
+            "title": "CKV_AWS_60 -> AC-6",
+            "description": "Ensure IAM role allows only specific services or principals to assume it",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "5ca5cbd2-1d9d-5bc9-9f11-103b5199dd01"
+              }
+            ]
+          },
+          {
+            "uuid": "8ea854a4-80cd-542a-acf1-08f7c172c662",
+            "title": "CKV_AWS_60 -> AC-3",
+            "description": "Ensure IAM role allows only specific services or principals to assume it",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-3_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "5ca5cbd2-1d9d-5bc9-9f11-103b5199dd01"
+              }
+            ]
+          },
+          {
+            "uuid": "0c5422d4-ab9b-5f36-bb37-93f1e0350942",
+            "title": "CKV_AWS_274 -> AC-6",
+            "description": "Disallow IAM roles, users, and groups from using the AWS AdministratorAccess policy",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "5502b86a-b169-5d3d-84e5-270b73effe26"
+              }
+            ]
+          },
+          {
+            "uuid": "6fcf6e53-22f4-5c0a-b815-1ffa5fa11ba4",
+            "title": "CKV_AWS_46 -> IA-5",
+            "description": "Ensure no hard-coded secrets exist in EC2 user data",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ia-5_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "489b59f4-c3a1-50bc-beaa-3b1e80b7d898"
+              }
+            ]
+          },
+          {
+            "uuid": "3c711b0e-8fe0-571c-aa9b-e1eda7a915d0",
+            "title": "CKV_AWS_88 -> SC-7",
+            "description": "EC2 instance should not have public IP.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "b99115b9-b90e-5e45-94ff-475edd1d0e59"
+              }
+            ]
+          },
+          {
+            "uuid": "e5d6b970-5106-57ca-bddd-9a2c2584d3c5",
+            "title": "CKV_AWS_79 -> CM-6",
+            "description": "Ensure Instance Metadata Service Version 1 is not enabled",
+            "target": {
+              "type": "objective-id",
+              "target-id": "cm-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "f6a34cf8-7f30-5d44-91bb-d92096ab4802"
+              }
+            ]
+          },
+          {
+            "uuid": "9f7a9a22-6af8-59bd-a6b0-b12777ac1fab",
+            "title": "CKV_AWS_79 -> SC-7",
+            "description": "Ensure Instance Metadata Service Version 1 is not enabled",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "f6a34cf8-7f30-5d44-91bb-d92096ab4802"
+              }
+            ]
+          },
+          {
+            "uuid": "a710e27a-7898-547d-b824-33a5020be938",
+            "title": "CKV_AWS_8 -> SC-28",
+            "description": "Ensure all data stored in the Launch configuration or instance Elastic Blocks Store is securely encrypted",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-28_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "d818bb16-73b3-5335-9626-25a804fd87c4"
+              }
+            ]
+          },
+          {
+            "uuid": "33761472-6906-5343-88d8-1e5d632c8601",
+            "title": "CKV_AWS_1 -> AC-6",
+            "description": "Ensure IAM policies that allow full \"*-*\" administrative privileges are not created",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "d453781d-7181-5e51-928e-2d6843a0b225"
+              }
+            ]
+          },
+          {
+            "uuid": "59ca6cc6-f731-5aec-9411-b728cf90c851",
+            "title": "CKV_AWS_358 -> AC-3",
+            "description": "Ensure AWS GitHub Actions OIDC authorization policies only allow safe claims and claim order",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-3_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "ecbdd191-84ac-530b-aefe-6f14b988c5e4"
+              }
+            ]
+          },
+          {
+            "uuid": "65e11061-877e-5d52-b19d-30941aaeb20b",
+            "title": "CKV_AWS_358 -> IA-8",
+            "description": "Ensure AWS GitHub Actions OIDC authorization policies only allow safe claims and claim order",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ia-8_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "ecbdd191-84ac-530b-aefe-6f14b988c5e4"
+              }
+            ]
+          },
+          {
+            "uuid": "9a654aa9-2c14-5b61-885e-b6d496bb78a0",
+            "title": "CKV_AWS_107 -> AC-6",
+            "description": "Ensure IAM policies does not allow credentials exposure",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "011b1a9b-af30-56b0-8fe6-c95b5783945b"
+              }
+            ]
+          },
+          {
+            "uuid": "e700d388-0386-5f85-b09c-a07619cf8aa6",
+            "title": "CKV_AWS_107 -> IA-5",
+            "description": "Ensure IAM policies does not allow credentials exposure",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ia-5_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "011b1a9b-af30-56b0-8fe6-c95b5783945b"
+              }
+            ]
+          },
+          {
+            "uuid": "d691598c-109d-5e02-9fcc-57f7bdf74796",
+            "title": "CKV_AWS_108 -> AC-6",
+            "description": "Ensure IAM policies does not allow data exfiltration",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "a34e5517-ffdc-5224-aa0d-17f0e680b9ce"
+              }
+            ]
+          },
+          {
+            "uuid": "63366b45-80d5-5d34-9f42-1ddaf085b7d2",
+            "title": "CKV_AWS_108 -> SC-7",
+            "description": "Ensure IAM policies does not allow data exfiltration",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "a34e5517-ffdc-5224-aa0d-17f0e680b9ce"
+              }
+            ]
+          },
+          {
+            "uuid": "e6872840-e2e7-552e-88b4-85c5774144c5",
+            "title": "CKV_AWS_109 -> AC-6",
+            "description": "Ensure IAM policies does not allow permissions management / resource exposure without constraints",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "e2ed8770-f3a4-5b6f-95ea-28d1fd88096c"
+              }
+            ]
+          },
+          {
+            "uuid": "a48f15d5-dc45-529f-836a-b7c41cb100ef",
+            "title": "CKV_AWS_109 -> AC-2",
+            "description": "Ensure IAM policies does not allow permissions management / resource exposure without constraints",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-2_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "e2ed8770-f3a4-5b6f-95ea-28d1fd88096c"
+              }
+            ]
+          },
+          {
+            "uuid": "3d3b22c9-2aa9-5313-a55b-52b3144cbf91",
+            "title": "CKV_AWS_110 -> AC-6",
+            "description": "Ensure IAM policies does not allow privilege escalation",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "73a6f304-86e2-5ed5-877c-dde7125552a3"
+              }
+            ]
+          },
+          {
+            "uuid": "a5e1d751-1dda-5c4d-a3f5-efa1d85682ca",
+            "title": "CKV_AWS_283 -> AC-3",
+            "description": "Ensure no IAM policies documents allow ALL or any AWS principal permissions to the resource",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-3_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "3a97d8da-cd98-5142-abe5-261343b0e1df"
+              }
+            ]
+          },
+          {
+            "uuid": "862bff82-910d-51cb-8ba5-39167137779d",
+            "title": "CKV_AWS_283 -> AC-6",
+            "description": "Ensure no IAM policies documents allow ALL or any AWS principal permissions to the resource",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "3a97d8da-cd98-5142-abe5-261343b0e1df"
+              }
+            ]
+          },
+          {
+            "uuid": "480c1401-a037-54af-af62-0ddfe6ce6c41",
+            "title": "CKV_AWS_111 -> AC-6",
+            "description": "Ensure IAM policies does not allow write access without constraints",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "795c22ea-2a95-570e-b332-1928831304ab"
+              }
+            ]
+          },
+          {
+            "uuid": "4699125f-99ac-5324-a79c-fc1e715ff38d",
+            "title": "CKV_AWS_356 -> AC-6",
+            "description": "Ensure no IAM policies documents allow \"*\" as a statement's resource for restrictable actions",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "367e4999-c486-5271-96b2-2f39a901925e"
+              }
+            ]
+          },
+          {
+            "uuid": "58310f0a-26ec-5f5b-aa77-b00847ba68f9",
+            "title": "CKV_AWS_49 -> AC-6",
+            "description": "Ensure no IAM policies documents allow \"*\" as a statement's actions",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "c8150be6-ef4f-5b3b-959c-2ff342d141b8"
+              }
+            ]
+          },
+          {
+            "uuid": "9929ed74-e7d3-5bb3-8042-9ab50965b447",
+            "title": "CKV_AWS_1 -> AC-6",
+            "description": "Ensure IAM policies that allow full \"*-*\" administrative privileges are not created",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "9e51801b-0652-591b-b10e-abd2ec282d16"
+              }
+            ]
+          },
+          {
+            "uuid": "20a413fc-726a-56ec-b297-1836bd865520",
+            "title": "CKV_AWS_358 -> AC-3",
+            "description": "Ensure AWS GitHub Actions OIDC authorization policies only allow safe claims and claim order",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-3_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "2108badb-70c4-5866-bf71-4951b000c780"
+              }
+            ]
+          },
+          {
+            "uuid": "008d8e7b-4b64-5ebf-8c48-058a69c5ef32",
+            "title": "CKV_AWS_358 -> IA-8",
+            "description": "Ensure AWS GitHub Actions OIDC authorization policies only allow safe claims and claim order",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ia-8_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "2108badb-70c4-5866-bf71-4951b000c780"
+              }
+            ]
+          },
+          {
+            "uuid": "6c673744-b4de-5a91-a7cd-b7acae215ff0",
+            "title": "CKV_AWS_107 -> AC-6",
+            "description": "Ensure IAM policies does not allow credentials exposure",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "47819d30-c5ab-5c7a-afa8-52245e1690a8"
+              }
+            ]
+          },
+          {
+            "uuid": "cf4d272c-f9c5-53d1-b6c3-2f588fd43826",
+            "title": "CKV_AWS_107 -> IA-5",
+            "description": "Ensure IAM policies does not allow credentials exposure",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ia-5_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "47819d30-c5ab-5c7a-afa8-52245e1690a8"
+              }
+            ]
+          },
+          {
+            "uuid": "51716b60-ad0c-5137-85ae-2cbeaf29237d",
+            "title": "CKV_AWS_108 -> AC-6",
+            "description": "Ensure IAM policies does not allow data exfiltration",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "f49947ec-36b6-5093-9261-796d323a47be"
+              }
+            ]
+          },
+          {
+            "uuid": "13929b1c-ceaf-58df-b963-5913f4564768",
+            "title": "CKV_AWS_108 -> SC-7",
+            "description": "Ensure IAM policies does not allow data exfiltration",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "f49947ec-36b6-5093-9261-796d323a47be"
+              }
+            ]
+          },
+          {
+            "uuid": "b00d2318-4954-5e71-896a-55e270e48370",
+            "title": "CKV_AWS_109 -> AC-6",
+            "description": "Ensure IAM policies does not allow permissions management / resource exposure without constraints",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "032fcf67-41e6-511b-93e2-6595e0fe3cbf"
+              }
+            ]
+          },
+          {
+            "uuid": "1c907e0f-f664-51d1-8196-0ffde54fc239",
+            "title": "CKV_AWS_109 -> AC-2",
+            "description": "Ensure IAM policies does not allow permissions management / resource exposure without constraints",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-2_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "032fcf67-41e6-511b-93e2-6595e0fe3cbf"
+              }
+            ]
+          },
+          {
+            "uuid": "bd998bf4-e972-55d2-9673-462e34a419fa",
+            "title": "CKV_AWS_110 -> AC-6",
+            "description": "Ensure IAM policies does not allow privilege escalation",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "ea68c45a-97f4-51e0-8c98-d0c9991369ae"
+              }
+            ]
+          },
+          {
+            "uuid": "84930721-870d-5322-a965-8f4f1c2ef0ec",
+            "title": "CKV_AWS_283 -> AC-3",
+            "description": "Ensure no IAM policies documents allow ALL or any AWS principal permissions to the resource",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-3_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "3c0b8f1a-0cfe-5525-9179-9b4c59ab5f85"
+              }
+            ]
+          },
+          {
+            "uuid": "ce386ef2-f7b0-5cee-b56c-49bb88961028",
+            "title": "CKV_AWS_283 -> AC-6",
+            "description": "Ensure no IAM policies documents allow ALL or any AWS principal permissions to the resource",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "3c0b8f1a-0cfe-5525-9179-9b4c59ab5f85"
+              }
+            ]
+          },
+          {
+            "uuid": "b2b5e32a-acf7-5dae-b8bb-8aedbd56b3a2",
+            "title": "CKV_AWS_111 -> AC-6",
+            "description": "Ensure IAM policies does not allow write access without constraints",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "f8ee176b-6efd-54d7-88e9-987e236906f8"
+              }
+            ]
+          },
+          {
+            "uuid": "13d19ff6-55bf-5ffb-be53-fc0e35836f93",
+            "title": "CKV_AWS_356 -> AC-6",
+            "description": "Ensure no IAM policies documents allow \"*\" as a statement's resource for restrictable actions",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "e40513d9-71e1-5476-bf44-85d09e44804e"
+              }
+            ]
+          },
+          {
+            "uuid": "e7d5cd6b-9447-5f6f-8e1a-b500ff134e42",
+            "title": "CKV_AWS_49 -> AC-6",
+            "description": "Ensure no IAM policies documents allow \"*\" as a statement's actions",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "3c069390-8494-510c-ad22-9f80f0de5e85"
+              }
+            ]
+          },
+          {
+            "uuid": "031e01fa-6ce8-5dc9-9280-8b174e15833b",
+            "title": "CKV_AWS_66 -> AU-11",
+            "description": "Ensure that CloudWatch Log Group specifies retention days",
+            "target": {
+              "type": "objective-id",
+              "target-id": "au-11_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "2c2c24ce-b56c-50e0-8567-cef0a1de40c5"
+              }
+            ]
+          },
+          {
+            "uuid": "45359607-2eb5-5cf0-b628-5e2d6289c194",
+            "title": "CKV_AWS_338 -> AU-11",
+            "description": "Ensure CloudWatch log groups retains logs for at least 1 year",
+            "target": {
+              "type": "objective-id",
+              "target-id": "au-11_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "60c31e28-6018-5db8-970b-bd6f5b3368b5"
+              }
+            ]
+          },
+          {
+            "uuid": "1ee8f07e-c589-5016-a815-f9916ea831fb",
+            "title": "CKV_AWS_393 -> AC-3",
+            "description": "Ensure AWS GitHub Actions OIDC authorization policies only allow safe claims and claim order on IAM role",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-3_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "21ecd3cb-875b-5350-a85c-3bf76c296500"
+              }
+            ]
+          },
+          {
+            "uuid": "faf7e48c-71f7-58fe-a46d-e104e2a73682",
+            "title": "CKV_AWS_393 -> IA-8",
+            "description": "Ensure AWS GitHub Actions OIDC authorization policies only allow safe claims and claim order on IAM role",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ia-8_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "21ecd3cb-875b-5350-a85c-3bf76c296500"
+              }
+            ]
+          },
+          {
+            "uuid": "194877eb-f6d5-53b8-8736-468c94833211",
+            "title": "CKV_AWS_274 -> AC-6",
+            "description": "Disallow IAM roles, users, and groups from using the AWS AdministratorAccess policy",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "161c9cf1-5c8b-52b7-a898-ebdc580f4f84"
+              }
+            ]
+          },
+          {
+            "uuid": "43743c00-713c-56b8-b049-427fc259fc04",
+            "title": "CKV_AWS_61 -> AC-6",
+            "description": "Ensure AWS IAM policy does not allow assume role permission across all services",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "c4ac920b-352d-504a-95ae-4b7026bd62e5"
+              }
+            ]
+          },
+          {
+            "uuid": "ffd65736-e1ca-52ff-ad35-1b0bf8cd2cfa",
+            "title": "CKV_AWS_61 -> AC-3",
+            "description": "Ensure AWS IAM policy does not allow assume role permission across all services",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-3_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "c4ac920b-352d-504a-95ae-4b7026bd62e5"
+              }
+            ]
+          },
+          {
+            "uuid": "cf6b6225-83cd-5d09-b076-7084823c2151",
+            "title": "CKV_AWS_60 -> AC-6",
+            "description": "Ensure IAM role allows only specific services or principals to assume it",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "800965af-3d77-5a3c-bd92-4d78b383341a"
+              }
+            ]
+          },
+          {
+            "uuid": "0abd18f9-cd6b-5d85-9453-039133baceab",
+            "title": "CKV_AWS_60 -> AC-3",
+            "description": "Ensure IAM role allows only specific services or principals to assume it",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-3_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "800965af-3d77-5a3c-bd92-4d78b383341a"
+              }
+            ]
+          },
+          {
+            "uuid": "729e2cba-c7d8-55d8-b586-b2d2f406488e",
+            "title": "CKV_AWS_62 -> AC-6",
+            "description": "Ensure IAM policies that allow full \"*-*\" administrative privileges are not created",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "bf7ba047-9276-5d81-a229-52a94231d224"
+              }
+            ]
+          },
+          {
+            "uuid": "64263366-f017-556e-b3bd-280ff09544e5",
+            "title": "CKV_AWS_63 -> AC-6",
+            "description": "Ensure no IAM policies documents allow \"*\" as a statement's actions",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "633c9371-128f-5998-9d43-6ae26f0a2ed3"
+              }
+            ]
+          },
+          {
+            "uuid": "23a14301-1652-52e4-a65f-ca00098bff64",
+            "title": "CKV_AWS_130 -> SC-7",
+            "description": "Ensure VPC subnets do not assign public IP by default",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "ee421c45-d606-5db9-af03-b27775904bd2"
+              }
+            ]
+          },
+          {
+            "uuid": "9c34c6bb-5fef-5ded-ab89-21412926d8c3",
+            "title": "CKV_AWS_130 -> SC-7",
+            "description": "Ensure VPC subnets do not assign public IP by default",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "fd6194bb-a443-5728-9e23-21e7cf42082b"
+              }
+            ]
+          },
+          {
+            "uuid": "23843c48-eeeb-5504-82d0-77b6e5add05b",
+            "title": "CKV_AWS_41 -> IA-5",
+            "description": "Ensure no hard coded AWS access key and secret key exists in provider",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ia-5_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "053ff338-353c-501d-9a30-06d64aeffa5a"
+              }
+            ]
+          },
+          {
+            "uuid": "a520aca1-e8aa-5f95-b09a-0f2f83d94136",
+            "title": "CKV_AWS_23 -> CM-6",
+            "description": "Ensure every security group and rule has a description",
+            "target": {
+              "type": "objective-id",
+              "target-id": "cm-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "21d9495f-a85d-57e8-b819-ff561d019916"
+              }
+            ]
+          },
+          {
+            "uuid": "498f127a-41cc-5471-b8ee-72977cb27786",
+            "title": "CKV_AWS_382 -> SC-7",
+            "description": "Ensure no security groups allow egress from 0.0.0.0:0 to port -1",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "c97c0375-6cbf-5ba6-b3e1-7324688bb11a"
+              }
+            ]
+          },
+          {
+            "uuid": "f79057c9-5569-563a-950c-9b8c04713541",
+            "title": "CKV_AWS_382 -> AC-4",
+            "description": "Ensure no security groups allow egress from 0.0.0.0:0 to port -1",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-4_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "c97c0375-6cbf-5ba6-b3e1-7324688bb11a"
+              }
+            ]
+          },
+          {
+            "uuid": "0ec37dfb-b235-59f2-b807-7778d7b6174f",
+            "title": "CKV_AWS_24 -> SC-7",
+            "description": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 22",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "feaaf7ca-c50d-59e9-a273-66aa6c3f07bd"
+              }
+            ]
+          },
+          {
+            "uuid": "3ddf3e27-399c-5f77-9e21-12ca12e6e79e",
+            "title": "CKV_AWS_24 -> AC-4",
+            "description": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 22",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-4_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "feaaf7ca-c50d-59e9-a273-66aa6c3f07bd"
+              }
+            ]
+          },
+          {
+            "uuid": "85ff1297-d221-5a3a-a399-9f8aaebcdfdf",
+            "title": "CKV_AWS_25 -> SC-7",
+            "description": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 3389",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "7b3d3365-6a41-5612-a6d2-421f0662a852"
+              }
+            ]
+          },
+          {
+            "uuid": "c59c23fd-f45d-5d9b-b36c-982c57c15246",
+            "title": "CKV_AWS_25 -> AC-4",
+            "description": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 3389",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-4_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "7b3d3365-6a41-5612-a6d2-421f0662a852"
+              }
+            ]
+          },
+          {
+            "uuid": "810f0460-b351-5ad9-bc10-2993bf6ac6cc",
+            "title": "CKV_AWS_277 -> SC-7",
+            "description": "Ensure no security groups allow ingress from 0.0.0.0:0 to port -1",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "9be34acf-c628-5ed1-a95e-0fad94f367b8"
+              }
+            ]
+          },
+          {
+            "uuid": "71124d4c-dc9c-56ce-ae36-a1263f3a760a",
+            "title": "CKV_AWS_277 -> AC-4",
+            "description": "Ensure no security groups allow ingress from 0.0.0.0:0 to port -1",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-4_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "9be34acf-c628-5ed1-a95e-0fad94f367b8"
+              }
+            ]
+          },
+          {
+            "uuid": "60b8370c-bacb-5209-a5e3-bcda092d25ff",
+            "title": "CKV_AWS_23 -> CM-6",
+            "description": "Ensure every security group and rule has a description",
+            "target": {
+              "type": "objective-id",
+              "target-id": "cm-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "1f5964e0-ef5d-58f8-a3c1-28a75ca54152"
+              }
+            ]
+          },
+          {
+            "uuid": "beca1028-cead-5db2-a0eb-f99832784b33",
+            "title": "CKV_AWS_382 -> SC-7",
+            "description": "Ensure no security groups allow egress from 0.0.0.0:0 to port -1",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "93c56b0f-a607-5d24-85c2-b6e72719e5cc"
+              }
+            ]
+          },
+          {
+            "uuid": "056850b4-05f7-5310-a3f2-1625a45194bc",
+            "title": "CKV_AWS_382 -> AC-4",
+            "description": "Ensure no security groups allow egress from 0.0.0.0:0 to port -1",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-4_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "93c56b0f-a607-5d24-85c2-b6e72719e5cc"
+              }
+            ]
+          },
+          {
+            "uuid": "3fd241d7-c441-5f7b-adcb-39090c3381f3",
+            "title": "CKV_AWS_24 -> SC-7",
+            "description": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 22",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "fba6f932-7291-5ee6-b9ed-7726da36c956"
+              }
+            ]
+          },
+          {
+            "uuid": "2b86cf67-8fef-583e-bc47-98ae61e1892f",
+            "title": "CKV_AWS_24 -> AC-4",
+            "description": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 22",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-4_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "fba6f932-7291-5ee6-b9ed-7726da36c956"
+              }
+            ]
+          },
+          {
+            "uuid": "8753499f-ff6c-55c1-aa4b-6df033403f8d",
+            "title": "CKV_AWS_25 -> SC-7",
+            "description": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 3389",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "a7208a97-d96f-5e6c-8515-ae803d01e40e"
+              }
+            ]
+          },
+          {
+            "uuid": "5cfa7513-e9ee-5cc5-bcda-6ac87a8b6e00",
+            "title": "CKV_AWS_25 -> AC-4",
+            "description": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 3389",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-4_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "a7208a97-d96f-5e6c-8515-ae803d01e40e"
+              }
+            ]
+          },
+          {
+            "uuid": "e565f258-e12c-5d26-afc4-9e2f31bc3e6c",
+            "title": "CKV_AWS_260 -> SC-7",
+            "description": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 80",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "56f29518-e208-5909-adb8-b7c880d34f5b"
+              }
+            ]
+          },
+          {
+            "uuid": "3cfdf0ca-ec5f-5ca9-9743-ef492a027def",
+            "title": "CKV_AWS_260 -> AC-4",
+            "description": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 80",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-4_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "56f29518-e208-5909-adb8-b7c880d34f5b"
+              }
+            ]
+          },
+          {
+            "uuid": "3ee1d277-2bf5-5cbf-ba34-f8e79c0d9e06",
+            "title": "CKV_AWS_277 -> SC-7",
+            "description": "Ensure no security groups allow ingress from 0.0.0.0:0 to port -1",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "aeef56c7-7442-5167-906b-8236ee5d6f4a"
+              }
+            ]
+          },
+          {
+            "uuid": "9517a86b-2dbb-57da-b185-ec3a3718f00f",
+            "title": "CKV_AWS_277 -> AC-4",
+            "description": "Ensure no security groups allow ingress from 0.0.0.0:0 to port -1",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-4_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "aeef56c7-7442-5167-906b-8236ee5d6f4a"
+              }
+            ]
+          },
+          {
+            "uuid": "b3effc78-42f9-55c6-b5bd-91c6fb884f65",
+            "title": "CKV_AWS_23 -> CM-6",
+            "description": "Ensure every security group and rule has a description",
+            "target": {
+              "type": "objective-id",
+              "target-id": "cm-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "d68dc67f-95f5-5ec4-9923-cf61b18d9864"
+              }
+            ]
+          },
+          {
+            "uuid": "20a4b06e-3f0b-54dc-8728-78555c6ed56a",
+            "title": "CKV_AWS_382 -> SC-7",
+            "description": "Ensure no security groups allow egress from 0.0.0.0:0 to port -1",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "d2578b60-7eb4-5b8c-83ff-201c9773985b"
+              }
+            ]
+          },
+          {
+            "uuid": "8cc2e99b-9600-5fd3-923f-c55a1d94b871",
+            "title": "CKV_AWS_382 -> AC-4",
+            "description": "Ensure no security groups allow egress from 0.0.0.0:0 to port -1",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-4_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "d2578b60-7eb4-5b8c-83ff-201c9773985b"
+              }
+            ]
+          },
+          {
+            "uuid": "e9076b96-21d6-5ff3-b406-2e855997f8f5",
+            "title": "CKV_AWS_24 -> SC-7",
+            "description": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 22",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "5a012bf3-9940-53b4-98cb-f5f9e18e8182"
+              }
+            ]
+          },
+          {
+            "uuid": "603c85ca-d8ca-5d30-a258-993224056e96",
+            "title": "CKV_AWS_24 -> AC-4",
+            "description": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 22",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-4_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "5a012bf3-9940-53b4-98cb-f5f9e18e8182"
+              }
+            ]
+          },
+          {
+            "uuid": "10593328-d6da-59f6-ac2b-f59fdd98fd87",
+            "title": "CKV_AWS_25 -> SC-7",
+            "description": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 3389",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "73ebe13a-9fe7-5b7c-b67f-9b4080bcc8fc"
+              }
+            ]
+          },
+          {
+            "uuid": "c7e0b676-3cfa-5848-a061-3aa696f5d107",
+            "title": "CKV_AWS_25 -> AC-4",
+            "description": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 3389",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-4_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "73ebe13a-9fe7-5b7c-b67f-9b4080bcc8fc"
+              }
+            ]
+          },
+          {
+            "uuid": "b747aa79-8039-5004-b1ba-9795f58c7183",
+            "title": "CKV_AWS_260 -> SC-7",
+            "description": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 80",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "78af2a3d-6e1c-559b-825c-9e46de47e3be"
+              }
+            ]
+          },
+          {
+            "uuid": "8d6551db-32f6-5011-96c7-c675bcf2e3e6",
+            "title": "CKV_AWS_260 -> AC-4",
+            "description": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 80",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-4_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "78af2a3d-6e1c-559b-825c-9e46de47e3be"
+              }
+            ]
+          },
+          {
+            "uuid": "ba6e3eef-2738-58d8-b8eb-39aa0fa2f747",
+            "title": "CKV_AWS_277 -> SC-7",
+            "description": "Ensure no security groups allow ingress from 0.0.0.0:0 to port -1",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "eb7fdad8-c66e-592f-bd61-796535ab9f5b"
+              }
+            ]
+          },
+          {
+            "uuid": "47d97e69-9cd3-5e09-a925-19369c46d2fd",
+            "title": "CKV_AWS_277 -> AC-4",
+            "description": "Ensure no security groups allow ingress from 0.0.0.0:0 to port -1",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-4_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "eb7fdad8-c66e-592f-bd61-796535ab9f5b"
+              }
+            ]
+          },
+          {
+            "uuid": "f59d7711-c240-590e-9b3b-f0d6fc558052",
+            "title": "CKV2_AWS_35 -> SC-7",
+            "description": "AWS NAT Gateways should be utilized for the default route",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "4209fe16-e914-5574-9ba4-0ac78ffe2eaa"
+              }
+            ]
+          },
+          {
+            "uuid": "f3e7cf51-7ccd-5819-9720-cd9c07dc1a71",
+            "title": "CKV2_AWS_35 -> SC-7",
+            "description": "AWS NAT Gateways should be utilized for the default route",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "33497aa8-e77e-5d91-b3fe-08a8471c8401"
+              }
+            ]
+          },
+          {
+            "uuid": "1fd78fc7-55c8-5752-adf4-114473b08af5",
+            "title": "CKV2_AWS_35 -> SC-7",
+            "description": "AWS NAT Gateways should be utilized for the default route",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "350e7d5f-d99e-5377-ac61-b88be1e0e511"
+              }
+            ]
+          },
+          {
+            "uuid": "e31ccb2d-2bb1-57a4-aad1-902673634815",
+            "title": "CKV2_AWS_35 -> SC-7",
+            "description": "AWS NAT Gateways should be utilized for the default route",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "4066bb05-9ca4-58e2-b412-81ecca7c0521"
+              }
+            ]
+          },
+          {
+            "uuid": "070ed95a-5402-5101-bfe1-372b189f3a3a",
+            "title": "CKV2_AWS_56 -> AC-6",
+            "description": "Ensure AWS Managed IAMFullAccess IAM policy is not used.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "b05ab6a8-1f0d-5ff0-85b9-188a89b69477"
+              }
+            ]
+          },
+          {
+            "uuid": "2457dbf6-b49a-58a5-a244-9fbbf1452905",
+            "title": "CKV2_AWS_56 -> AC-6",
+            "description": "Ensure AWS Managed IAMFullAccess IAM policy is not used.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "ed2cfec9-a74a-579b-a017-7a649653f8de"
+              }
+            ]
+          },
+          {
+            "uuid": "82e6506c-3f8a-5c2d-9fa4-ed0b6d77dc43",
+            "title": "CKV2_AWS_56 -> AC-6",
+            "description": "Ensure AWS Managed IAMFullAccess IAM policy is not used.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "a1a23dd8-68d8-50a4-a9cd-301396729cbe"
+              }
+            ]
+          },
+          {
+            "uuid": "e3a0b951-0647-520e-990b-1853b498a328",
+            "title": "CKV2_AWS_74 -> SC-8",
+            "description": "Ensure AWS Load Balancers use strong ciphers",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-8_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "0f186415-6a01-586e-aca6-6d67575576c3"
+              }
+            ]
+          },
+          {
+            "uuid": "b8b65e77-6e5e-5395-8048-85b8ba7fee24",
+            "title": "CKV2_AWS_74 -> SC-13",
+            "description": "Ensure AWS Load Balancers use strong ciphers",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-13_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "0f186415-6a01-586e-aca6-6d67575576c3"
+              }
+            ]
+          },
+          {
+            "uuid": "37078dc7-c7a4-5cbd-ac0c-07b4abfb6b83",
+            "title": "CKV2_AWS_76 -> SI-3",
+            "description": "Ensure AWS ALB attached WAFv2 WebACL is configured with AMR for Log4j Vulnerability",
+            "target": {
+              "type": "objective-id",
+              "target-id": "si-3_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "ae921731-d5dd-5808-865d-9b16b84c6e5d"
+              }
+            ]
+          },
+          {
+            "uuid": "640b7f95-8580-5e94-b8a7-9a753a0d3400",
+            "title": "CKV2_AWS_76 -> SC-7",
+            "description": "Ensure AWS ALB attached WAFv2 WebACL is configured with AMR for Log4j Vulnerability",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "ae921731-d5dd-5808-865d-9b16b84c6e5d"
+              }
+            ]
+          },
+          {
+            "uuid": "81625e56-dbce-5fd8-a82c-2da9617eb1d3",
+            "title": "CKV2_AWS_41 -> IA-5",
+            "description": "Ensure an IAM role is attached to EC2 instance",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ia-5_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "f7d51ae1-868b-5eda-8551-73949b16ba64"
+              }
+            ]
+          },
+          {
+            "uuid": "a271d1c2-2867-5575-a611-95513fa07be6",
+            "title": "CKV2_AWS_41 -> AC-6",
+            "description": "Ensure an IAM role is attached to EC2 instance",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "f7d51ae1-868b-5eda-8551-73949b16ba64"
+              }
+            ]
+          },
+          {
+            "uuid": "29e909bf-7107-5d16-bde6-b2053ae56119",
+            "title": "CKV2_AWS_19 -> CM-7",
+            "description": "Ensure that all EIP addresses allocated to a VPC are attached to EC2 instances",
+            "target": {
+              "type": "objective-id",
+              "target-id": "cm-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "7cbc143f-e351-59e7-ab74-64d99381bc56"
+              }
+            ]
+          },
+          {
+            "uuid": "39c3e513-ef48-5535-8df4-eb8ad89f9e2c",
+            "title": "CKV2_AWS_5 -> CM-7",
+            "description": "Ensure that Security Groups are attached to another resource",
+            "target": {
+              "type": "objective-id",
+              "target-id": "cm-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "03430f38-26fb-5427-b93e-84ca06b8f8ab"
+              }
+            ]
+          },
+          {
+            "uuid": "e981b178-0d26-5d18-b0f8-dee68333d731",
+            "title": "CKV2_AWS_5 -> CM-7",
+            "description": "Ensure that Security Groups are attached to another resource",
+            "target": {
+              "type": "objective-id",
+              "target-id": "cm-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "01ba93e8-fc8d-5f67-9275-c7a48ed279bc"
+              }
+            ]
+          },
+          {
+            "uuid": "397b7e63-cb53-5b93-bdbc-d463b36c30bd",
+            "title": "CKV2_AWS_11 -> AU-12",
+            "description": "Ensure VPC flow logging is enabled in all VPCs",
+            "target": {
+              "type": "objective-id",
+              "target-id": "au-12_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "4c53e5bb-9ff3-5d21-8be5-c8d01f07208c"
+              }
+            ]
+          },
+          {
+            "uuid": "ed9645f1-4227-5b00-bfdd-43fc7492bd30",
+            "title": "CKV2_AWS_11 -> SI-4",
+            "description": "Ensure VPC flow logging is enabled in all VPCs",
+            "target": {
+              "type": "objective-id",
+              "target-id": "si-4_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "4c53e5bb-9ff3-5d21-8be5-c8d01f07208c"
+              }
+            ]
+          },
+          {
+            "uuid": "89184ccd-ff90-5d9e-a055-da5f64d8455b",
+            "title": "CKV2_AWS_44 -> SC-7",
+            "description": "Ensure AWS route table with VPC peering does not contain routes overly permissive to all traffic",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "f070fae9-e10f-5f43-941d-a0b8e31ef86b"
+              }
+            ]
+          },
+          {
+            "uuid": "2a38c494-6cf7-5978-83f1-4666a457cb72",
+            "title": "CKV2_AWS_44 -> AC-4",
+            "description": "Ensure AWS route table with VPC peering does not contain routes overly permissive to all traffic",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-4_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "f070fae9-e10f-5f43-941d-a0b8e31ef86b"
+              }
+            ]
+          },
+          {
+            "uuid": "e852a08a-fac0-5cbd-864c-75040aadbc99",
+            "title": "CKV2_AWS_44 -> SC-7",
+            "description": "Ensure AWS route table with VPC peering does not contain routes overly permissive to all traffic",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "8e5f7f96-72e8-5c4b-8b96-e6b22d8f7df4"
+              }
+            ]
+          },
+          {
+            "uuid": "afc3bcd7-803b-598f-8357-6db1f0bf874e",
+            "title": "CKV2_AWS_44 -> AC-4",
+            "description": "Ensure AWS route table with VPC peering does not contain routes overly permissive to all traffic",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-4_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "8e5f7f96-72e8-5c4b-8b96-e6b22d8f7df4"
+              }
+            ]
+          },
+          {
+            "uuid": "7ce70293-ab7d-5778-900e-a2260c712cf7",
+            "title": "CKV2_AWS_44 -> SC-7",
+            "description": "Ensure AWS route table with VPC peering does not contain routes overly permissive to all traffic",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "805ff5bb-0f73-570d-9bd5-81d852a9ae6b"
+              }
+            ]
+          },
+          {
+            "uuid": "ff71ae3c-a0c2-5b75-8aee-10c08d64e37c",
+            "title": "CKV2_AWS_44 -> AC-4",
+            "description": "Ensure AWS route table with VPC peering does not contain routes overly permissive to all traffic",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-4_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "805ff5bb-0f73-570d-9bd5-81d852a9ae6b"
+              }
+            ]
+          },
+          {
+            "uuid": "21add2c8-eafc-5d66-b0cc-1d50456eada1",
+            "title": "CKV2_AWS_44 -> SC-7",
+            "description": "Ensure AWS route table with VPC peering does not contain routes overly permissive to all traffic",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "bc8c30d0-f6db-51d6-be09-edde55c828c4"
+              }
+            ]
+          },
+          {
+            "uuid": "3b35f288-eb36-5c20-9e33-3acd69bf39f3",
+            "title": "CKV2_AWS_44 -> AC-4",
+            "description": "Ensure AWS route table with VPC peering does not contain routes overly permissive to all traffic",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-4_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "bc8c30d0-f6db-51d6-be09-edde55c828c4"
+              }
+            ]
+          },
+          {
+            "uuid": "537a9648-1056-584c-a493-0712672a8d81",
+            "title": "CKV2_AWS_12 -> SC-7",
+            "description": "Ensure the default security group of every VPC restricts all traffic",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "bad5a2b5-3f73-5ac6-8c6e-875e24fd0f4f"
+              }
+            ]
+          },
+          {
+            "uuid": "84a2fc90-d768-54a5-8c48-0e3c62bc8262",
+            "title": "CKV2_AWS_12 -> AC-4",
+            "description": "Ensure the default security group of every VPC restricts all traffic",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-4_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "bad5a2b5-3f73-5ac6-8c6e-875e24fd0f4f"
+              }
+            ]
+          },
+          {
+            "uuid": "39d9aee0-0c0d-5c0d-ad53-e187c6ae95f4",
+            "title": "CKV2_AWS_40 -> AC-6",
+            "description": "Ensure AWS IAM policy does not allow full IAM privileges",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "9bb75277-d678-53c9-8d48-504d8c5f30f4"
+              }
+            ]
+          },
+          {
+            "uuid": "72740863-1127-5be7-877c-39dc4b474c93",
+            "title": "CKV2_AWS_40 -> AC-6",
+            "description": "Ensure AWS IAM policy does not allow full IAM privileges",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "29a69e40-793c-5475-af24-b2f032db62e9"
+              }
+            ]
+          },
+          {
+            "uuid": "d221b3d4-c984-5219-a3d1-a87df293832e",
+            "title": "CKV2_AWS_40 -> AC-6",
+            "description": "Ensure AWS IAM policy does not allow full IAM privileges",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "5953434b-6148-57b7-9126-894f13d5a76e"
+              }
+            ]
+          },
+          {
+            "uuid": "ea5caf7c-036b-5f20-963f-5b07aa83b6b4",
+            "title": "CKV_AWS_91 -> AU-2",
+            "description": "Ensure the ELBv2 (Application/Network) has access logging enabled",
+            "target": {
+              "type": "objective-id",
+              "target-id": "au-2_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "bcb432d6-07c5-5618-9375-cc3804e4bcf5"
+              }
+            ]
+          },
+          {
+            "uuid": "7090bebc-2fde-535c-81a1-3fd5b8bfb493",
+            "title": "CKV_AWS_91 -> AU-12",
+            "description": "Ensure the ELBv2 (Application/Network) has access logging enabled",
+            "target": {
+              "type": "objective-id",
+              "target-id": "au-12_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "bcb432d6-07c5-5618-9375-cc3804e4bcf5"
+              }
+            ]
+          },
+          {
+            "uuid": "956ce902-f62f-530d-9bc9-36f3a357e41f",
+            "title": "CKV_AWS_150 -> CM-3",
+            "description": "Ensure that Load Balancer has deletion protection enabled",
+            "target": {
+              "type": "objective-id",
+              "target-id": "cm-3_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "3060da4a-367d-56b5-ad45-e27328f213c7"
+              }
+            ]
+          },
+          {
+            "uuid": "d1edd1ff-d810-55da-bda5-a18d001d2a72",
+            "title": "CKV_AWS_2 -> SC-8",
+            "description": "Ensure ALB protocol is HTTPS",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-8_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "71ae60ba-5fb2-5996-acaf-cd1e0f0a3639"
+              }
+            ]
+          },
+          {
+            "uuid": "87ec7609-afdc-569e-a0fc-3e04a1574ad7",
+            "title": "CKV_AWS_126 -> SI-4",
+            "description": "Ensure that detailed monitoring is enabled for EC2 instances",
+            "target": {
+              "type": "objective-id",
+              "target-id": "si-4_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "397fee83-0e85-58cc-b623-2d6c1ef050c5"
+              }
+            ]
+          },
+          {
+            "uuid": "a6c32e76-6334-5f1c-94c7-ec4505032032",
+            "title": "CKV_AWS_135 -> SC-5",
+            "description": "Ensure that EC2 is EBS optimized",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-5_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "2951be09-86fc-5dc1-8674-35c009a24de3"
+              }
+            ]
+          },
+          {
+            "uuid": "1366ff30-4bee-506f-9820-54500ccbcf9a",
+            "title": "CKV_AWS_158 -> SC-28",
+            "description": "Ensure that CloudWatch Log Group is encrypted by KMS",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-28_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "fd5f1a6b-709b-5707-845d-dc3413bee288"
+              }
+            ]
+          },
+          {
+            "uuid": "0ffd0ea3-4830-5af1-bd13-43bd5de3e3a1",
+            "title": "CKV_AWS_394 -> CM-2",
+            "description": "Ensure aws_availability_zones data source pins zone identity so its result set does not silently expand when AWS adds an Availability Zone",
+            "target": {
+              "type": "objective-id",
+              "target-id": "cm-2_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "b9ef9360-c658-523c-8cff-2e5988a255ae"
+              }
+            ]
+          },
+          {
+            "uuid": "da73e72c-8ef4-5975-b330-b10138b1a86b",
+            "title": "CKV_AWS_260 -> SC-7",
+            "description": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 80",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "ddb8e8dc-2dc0-529e-8cbb-634fac518804"
+              }
+            ]
+          },
+          {
+            "uuid": "8a5331eb-d62f-5f45-9585-d16f4a7f3799",
+            "title": "CKV_AWS_260 -> AC-4",
+            "description": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 80",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-4_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "ddb8e8dc-2dc0-529e-8cbb-634fac518804"
+              }
+            ]
+          },
+          {
+            "uuid": "70dd6cea-1134-59a7-9e9a-707aca678c8f",
+            "title": "CKV2_AWS_20 -> SC-8",
+            "description": "Ensure that ALB redirects HTTP requests into HTTPS ones",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-8_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "dcac00c8-a6f3-5567-9c7f-9f2e4408bac7"
+              }
+            ]
+          },
+          {
+            "uuid": "81d26fe9-ad22-51f7-90ae-6e32045d9597",
+            "title": "CKV_AWS_103 -> SC-8",
+            "description": "Ensure that load balancer is using at least TLS 1.2",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-8_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "e4cbe5c0-e305-5c57-a385-ac9c6004615f"
+              }
+            ]
+          },
+          {
+            "uuid": "73c465ea-81c9-5f88-8998-0b9fefbb3f38",
+            "title": "CKV_AWS_103 -> SC-13",
+            "description": "Ensure that load balancer is using at least TLS 1.2",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-13_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "e4cbe5c0-e305-5c57-a385-ac9c6004615f"
+              }
+            ]
+          },
+          {
+            "uuid": "baa4e7d6-61e8-5966-bb9d-74023ed7fb75",
+            "title": "CKV2_AWS_28 -> SC-7",
+            "description": "Ensure public facing ALB are protected by WAF",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "fdc8c113-cc76-5bfa-9811-f84edd6fd2ed"
+              }
+            ]
+          },
+          {
+            "uuid": "d871fa9c-4cde-5716-9a1d-b9202d89a7ca",
+            "title": "CKV2_AWS_28 -> SI-4",
+            "description": "Ensure public facing ALB are protected by WAF",
+            "target": {
+              "type": "objective-id",
+              "target-id": "si-4_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "fdc8c113-cc76-5bfa-9811-f84edd6fd2ed"
+              }
+            ]
+          },
+          {
+            "uuid": "8b3f7616-a0b5-576d-955a-1593ae178553",
+            "title": "CKV_AWS_378 -> SC-8",
+            "description": "Ensure AWS Load Balancer doesn't use HTTP protocol",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-8_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "ffbccfdb-c371-5d21-879e-72af8e92526b"
+              }
+            ]
+          },
+          {
+            "uuid": "ad22c744-2e06-5004-b180-62cbfbf4ab82",
+            "title": "CKV2_AWS_5 -> CM-7",
+            "description": "Ensure that Security Groups are attached to another resource",
+            "target": {
+              "type": "objective-id",
+              "target-id": "cm-7_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "21ce4245-f9ef-5518-aa39-0af10f09d66f"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
