@@ -1,6 +1,6 @@
 resource "aws_cloudwatch_log_group" "vpc_flow_logs" {
   name              = "/aws/vpc/${local.project_name}/flow-logs"
-  retention_in_days = 14
+  retention_in_days = 365 # one year, for incident investigation and audit
 
   tags = merge(local.tags, {
     Name = "${local.project_name}-vpc-flow-logs"

@@ -10,6 +10,15 @@ resource "aws_vpc" "main" {
 
 data "aws_availability_zones" "available" {}
 
+# Lock down the default security group so nothing can fall back to it (CIS AWS 5.4).
+resource "aws_default_security_group" "default" {
+  vpc_id = aws_vpc.main.id
+
+  tags = merge(local.tags, {
+    Name = "${local.project_name}-default-sg-restricted"
+  })
+}
+
 resource "aws_internet_gateway" "igw" {
   vpc_id = aws_vpc.main.id
 
@@ -24,7 +33,7 @@ resource "aws_subnet" "public" {
   vpc_id                  = aws_vpc.main.id
   cidr_block              = each.value
   availability_zone       = data.aws_availability_zones.available.names[tonumber(each.key)]
-  map_public_ip_on_launch = true
+  map_public_ip_on_launch = false # ALB and NAT gateway bring their own addresses
 
   tags = merge(local.tags, {
     Name = "${local.project_name}-public-${each.key}"

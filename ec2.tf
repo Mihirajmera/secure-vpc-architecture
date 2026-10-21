@@ -59,6 +59,10 @@ resource "aws_instance" "app" {
     http_tokens   = "required"
   }
 
+  root_block_device {
+    encrypted = true
+  }
+
   tags = merge(local.tags, {
     Name = "${local.project_name}-app"
   })
